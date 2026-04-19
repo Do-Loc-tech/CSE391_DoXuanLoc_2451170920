@@ -8,5 +8,4 @@
 ## Instructions:
 - Please check the subdirectories for detailed content.
 
----
-**Thank you for reviewing my project!**
+**--- Thank you for reviewing my project! ---**
