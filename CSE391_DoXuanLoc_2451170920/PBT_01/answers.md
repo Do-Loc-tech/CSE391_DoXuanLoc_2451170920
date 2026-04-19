@@ -46,12 +46,9 @@ Câu B3 - Debug HTML
     (+) Dòng 15 — Thẻ <img> thiếu dấu ngoặc kép cho thuộc tính và thiếu thuộc tính alt (quan trọng cho accessibility) — Sửa thành <img src="iphone.jpg" alt="...">.
     (+) Dòng 17 — Sai thứ tự đóng thẻ lồng nhau (đóng <p> trước <b>) — Sửa thành <b>...</b></p>.
     (+) Dòng 20-30 — Bảng dữ liệu thiếu thẻ tiêu đề <th> (semantic) — Thay <td> hàng đầu tiên bằng <th>.
-
-Lỗi 9: Dòng 33 — Sử dụng thẻ <main> lần thứ hai — HTML chuẩn chỉ cho phép duy nhất một thẻ <main>. Sửa thành thẻ <aside> vì đây là nội dung sidebar.
-
-Lỗi 10: Dòng 37 — Thẻ <p> trong footer chưa có thẻ đóng — Thêm </p> sau nội dung Copyright.
-
-Lỗi 11: Tổng thể — Cấu trúc thiếu tính logic: thẻ <h1> nên nằm trong <header> để đúng cấu trúc phân cấp trang.
+    (+) Dòng 33 — Sử dụng thẻ <main> lần thứ hai — HTML chuẩn chỉ cho phép duy nhất một thẻ <main>. Sửa thành thẻ <aside> vì đây là nội dung sidebar.
+    (+) Dòng 37 — Thẻ <p> trong footer chưa có thẻ đóng — Thêm </p> sau nội dung Copyright.
+    (+) Tổng thể — Cấu trúc thiếu tính logic: thẻ <h1> nên nằm trong <header> để đúng cấu trúc phân cấp trang.
 
     
 PHẦN C - Suy luận:
