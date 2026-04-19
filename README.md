@@ -1,7 +1,7 @@
 # CSE391 - Web Development Fundamentals
 
 ## Student Information:
-- **Full Name:** Do Xuan Loc
+- **Full Name (Vietnamese):** Đỗ Xuân Lộc
 - **Student ID:** 2451170920
 - **Class:** 66KTPM1
 
