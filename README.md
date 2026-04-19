@@ -1,7 +1,12 @@
-# CSE391 - Nền tảng phát triển Web
-# Thông tin sinh viên:
-  - Họ và tên: Đỗ Xuân Lộc
-  - Mã sinh viên: 2451170920
-  - Lớp: 66KTPM1
-# Hướng dẫn kiểm tra: 
-  
+# CSE391 - Web Development Fundamentals
+
+## Student Information:
+- **Full Name:** Do Xuan Loc
+- **Student ID:** 2451170920
+- **Class:** 66KTPM1
+
+## Instructions:
+- Please check the subdirectories for detailed content.
+
+---
+**Thank you for reviewing my project!**
