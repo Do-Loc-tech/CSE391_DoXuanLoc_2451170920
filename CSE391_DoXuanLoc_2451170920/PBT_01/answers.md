@@ -17,6 +17,10 @@ Câu A2:
     3. `<div class="main">` -> `<main>`: Nội dung chính duy nhất.
     4. `<div class="product">` -> `<article>`: Sản phẩm là nội dung độc lập.
     5. `<div class="footer">` -> `<footer>`: Chân trang.
+- Ảnh phân tích 1 trang web (VD: truy cập `google.com` <img src="screenshots/screen_google_check.png"> ) theo 3 yêu cầu:
+    1. Status Code của request đầu tiên
+    2. Tổng thời gian load trang
+    3. Một request trả về file CSS
 
 Câu A3:
 - Text art:
@@ -74,15 +78,12 @@ Câu C1 - Thiết kế cấu trúc
 </nav>
 
 <main> <div class="product-container">
-        
         <section class="product-visuals"> <figure> <img src="main-product.jpg" alt="iPhone 16 chính diện" loading="lazy"> <figcaption>Ảnh sản phẩm chính</figcaption>
             </figure>
             </section>
-
-        <article class="product-info"> <h1>iPhone 16 Pro Max</h1> <p class="price"><mark>25.990.000đ</mark></p> <div class="rating">⭐⭐⭐⭐⭐</div>
+        <article class="product-info"> <h1>iPhone 16 Pro Max</h1> <p class="price"><mark>25.990.000đ</mark></p> <div class="rating">⭐⭐⭐⭐⭐</div>   
             <p class="description">Mô tả tóm tắt sản phẩm...</p>
         </article>
-
         <section class="specs"> <h2>Thông số kỹ thuật</h2>
             <table> <thead> <tr>
                         <th>Đặc tính</th>
@@ -96,14 +97,11 @@ Câu C1 - Thiết kế cấu trúc
                 </tbody>
             </table>
         </section>
-
         <section class="reviews"> <h2>Đánh giá từ khách hàng</h2>
             <article> <p>Sản phẩm rất tốt!</p>
                 <time datetime="2026-04-19">19/04/2026</time> </article>
         </section>
-
     </div>
-
     <aside> <h3>Sản phẩm tương tự</h3>
         </aside>
 </main>
@@ -115,4 +113,4 @@ Câu C2 - So sánh và tranh luận
     + Thứ nhất, về mặt SEO (Search Engine Optimization): Các bộ máy tìm kiếm như Google dựa vào các thẻ như <header>, <main>, <article> để xác định đâu là nội dung quan trọng. Nếu mọi thứ đều là <div>, "Google Bot" sẽ mất rất nhiều thời gian để phân tích, dẫn đến việc website bị tụt hạng so với các đối thủ sử dụng cấu trúc chuẩn (Tham chiếu Chương 04).
     + Thứ hai, về mặt Accessibility (Khả năng tiếp cận): Những người khiếm thị sử dụng phần mềm đọc màn hình (Screen Reader) phụ thuộc hoàn toàn vào Semantic HTML để điều hướng. Ví dụ, khi dùng thẻ <nav>, người dùng có thể nhảy nhanh tới menu chính. Nếu thay bằng <div>, họ sẽ bị lạc lối trong một "biển" dữ liệu không tên.
 - Ví dụ cụ thể chứng minh semantic HTML giúp ích: Khi ta dùng thẻ <time datetime="2026-04-19">, trình duyệt không chỉ hiện chữ mà còn có thể gợi ý người dùng thêm vào lịch (Calendar). Nếu chỉ dùng <div>19/04</div>, trình duyệt chỉ coi đó là một chuỗi ký tự vô hồn.
-- Tuy nhiên, <div> vẫn có chỗ đứng riêng: Trong thực tế, <div> vẫn cực kỳ phù hợp khi chúng ta cần tạo ra các "hộp bọc" (wrapper) chỉ nhằm mục đích dàn trang (Layout) hoặc tạo style cho CSS (như tạo một container để căn giữa trang) mà bản thân cái hộp đó không mang ý nghĩa nội dung cụ thể nào.
+- Trường hợp cụ thể <div> vẫn có chỗ đứng riêng: Trong thực tế, <div> vẫn cực kỳ phù hợp khi chúng ta cần tạo ra các "hộp bọc" (wrapper) chỉ nhằm mục đích dàn trang (Layout) hoặc tạo style cho CSS (như tạo một container để căn giữa trang) mà bản thân cái hộp đó không mang ý nghĩa nội dung cụ thể nào.
