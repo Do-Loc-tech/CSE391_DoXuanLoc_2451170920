@@ -50,7 +50,13 @@ Câu B3 - Debug HTML
     (+) Dòng 37 — Thẻ <p> trong footer chưa có thẻ đóng — Thêm </p> sau nội dung Copyright.
     (+) Tổng thể — Cấu trúc thiếu tính logic: thẻ <h1> nên nằm trong <header> để đúng cấu trúc phân cấp trang.
 
-    
+Câu B4 - Phân tích trang web thật
+    1. 3 thẻ semantic HTML: 
+        ![Header](screenshots/header_shopee.png)
+        ![Nav](screenshots/nav_shopee.png)
+        ![Footer](screenshots/footer_shopee.png)
+    2. 
+
 PHẦN C - Suy luận:
 
 Câu C1 - Thiết kế cấu trúc
