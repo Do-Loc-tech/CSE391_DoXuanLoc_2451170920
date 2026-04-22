@@ -7,5 +7,6 @@
 
 ## Instructions:
 - Please check the subdirectories for detailed content.
+-Please view in "Code" mode instead of the default "Preview" for the best experience.
 
 **--- Thank you for reviewing my project! ---**
