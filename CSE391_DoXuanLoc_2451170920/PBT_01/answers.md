@@ -1,22 +1,22 @@
 PHẦN A - KIỂM TRA ĐỌC HIỂU
 
 Câu A1:
-    1. Khi gõ https://shopee.vn vào trình duyệt và nhấn Enter, 5 bước xảy ra (từ DNS lookup đến render) là:
-        - DNS Lookup: Tìm địa chỉ IP của `shopee.vn`.
-        - TCP Handshake: Thiết lập kết nối giữa Client và Server.
-        - HTTP Request: Trình duyệt gửi yêu cầu lấy file HTML.
-        - Server Response: Server gửi trả lại dữ liệu.
-        - Browser Rendering: Trình duyệt đọc HTML/CSS/JS để vẽ giao diện.
-    2. Trong DevTools của Chrome, tab Network cho thấy thông tin về các yêu cầu/phản hồi giữa trình duyệt và máy chủ, giúp theo dõi thời gian tải và kích thước file.
+1. Khi gõ https://shopee.vn vào trình duyệt và nhấn Enter, 5 bước xảy ra (từ DNS lookup đến render) là:
+- DNS Lookup: Tìm địa chỉ IP của `shopee.vn`.
+- TCP Handshake: Thiết lập kết nối giữa Client và Server.
+- HTTP Request: Trình duyệt gửi yêu cầu lấy file HTML.
+- Server Response: Server gửi trả lại dữ liệu.
+- Browser Rendering: Trình duyệt đọc HTML/CSS/JS để vẽ giao diện.
+2. Trong DevTools của Chrome, tab Network cho thấy thông tin về các yêu cầu/phản hồi giữa trình duyệt và máy chủ, giúp theo dõi thời gian tải và kích thước file.
 
 
 Câu A2:
-    - Trang web bị Google đánh giá SEO thấp vì có các lỗi sau đây:
-        1. `<div class="header">` -> `<header>`: Định nghĩa phần đầu trang.
-        2. `<div class="menu">` -> `<nav>`: Khu vực điều hướng.
-        3. `<div class="main">` -> `<main>`: Nội dung chính duy nhất.
-        4. `<div class="product">` -> `<article>`: Sản phẩm là nội dung độc lập.
-        5. `<div class="footer">` -> `<footer>`: Chân trang.
+- Trang web bị Google đánh giá SEO thấp vì có các lỗi sau đây:
+    1. `<div class="header">` -> `<header>`: Định nghĩa phần đầu trang.
+    2. `<div class="menu">` -> `<nav>`: Khu vực điều hướng.
+    3. `<div class="main">` -> `<main>`: Nội dung chính duy nhất.
+    4. `<div class="product">` -> `<article>`: Sản phẩm là nội dung độc lập.
+    5. `<div class="footer">` -> `<footer>`: Chân trang.
 
 Câu A3:
     - Text art:
