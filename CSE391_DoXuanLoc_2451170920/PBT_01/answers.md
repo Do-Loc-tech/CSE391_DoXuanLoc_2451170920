@@ -39,20 +39,20 @@ Câu A4:
 - <tfoot>: Table Footer - Chứa thông tin tổng kết của bảng.
 
 
-Phần B - Thực hành code:
+Phần B - Thực hành Code:
 
 Câu B3 - Debug HTML
-(+) Dòng 1 — Khai báo <!DOCTYPE> thiếu html — Sửa thành <!DOCTYPE html>.
-(+) Dòng 2 — Thẻ <title> chưa đóng — Thêm thẻ đóng </title> sau nội dung tiêu đề.
-(+) Dòng 3 — Thuộc tính charset ghi sai utf8 — Sửa thành UTF-8 và đưa lên trên thẻ <title> để trình duyệt đọc sớm nhất.
-(+) Dòng 4 — Thẻ <h1> đóng sai cú pháp (ghi là <h1> thay vì </h1>) — Sửa thành </h1>.
-(+) Dòng 8 — Thẻ <a> của link Trang chủ đóng sai (<a>) — Sửa thành </a>.
-(+) Dòng 15 — Thẻ <img> thiếu dấu ngoặc kép cho thuộc tính và thiếu thuộc tính alt (quan trọng cho accessibility) — Sửa thành <img src="iphone.jpg" alt="...">.
-(+) Dòng 17 — Sai thứ tự đóng thẻ lồng nhau (đóng <p> trước <b>) — Sửa thành <b>...</b></p>.
-(+) Dòng 20-30 — Bảng dữ liệu thiếu thẻ tiêu đề <th> (semantic) — Thay <td> hàng đầu tiên bằng <th>.
-(+) Dòng 33 — Sử dụng thẻ <main> lần thứ hai — HTML chuẩn chỉ cho phép duy nhất một thẻ <main>. Sửa thành thẻ <aside> vì đây là nội dung sidebar.
-(+) Dòng 37 — Thẻ <p> trong footer chưa có thẻ đóng — Thêm </p> sau nội dung Copyright.
-(+) Tổng thể — Cấu trúc thiếu tính logic: thẻ <h1> nên nằm trong <header> để đúng cấu trúc phân cấp trang.
+- Dòng 1 — Khai báo <!DOCTYPE> thiếu html — Sửa thành <!DOCTYPE html>.
+- Dòng 2 — Thẻ <title> chưa đóng — Thêm thẻ đóng </title> sau nội dung tiêu đề.
+- Dòng 3 — Thuộc tính charset ghi sai utf8 — Sửa thành UTF-8 và đưa lên trên thẻ <title> để trình duyệt đọc sớm nhất.
+- Dòng 4 — Thẻ <h1> đóng sai cú pháp (ghi là <h1> thay vì </h1>) — Sửa thành </h1>.
+- Dòng 8 — Thẻ <a> của link Trang chủ đóng sai (<a>) — Sửa thành </a>.
+- Dòng 15 — Thẻ <img> thiếu dấu ngoặc kép cho thuộc tính và thiếu thuộc tính alt (quan trọng cho accessibility) — Sửa thành <img src="iphone.jpg" alt="...">.
+- Dòng 17 — Sai thứ tự đóng thẻ lồng nhau (đóng <p> trước <b>) — Sửa thành <b>...</b></p>.
+- Dòng 20-30 — Bảng dữ liệu thiếu thẻ tiêu đề <th> (semantic) — Thay <td> hàng đầu tiên bằng <th>.
+- Dòng 33 — Sử dụng thẻ <main> lần thứ hai — HTML chuẩn chỉ cho phép duy nhất một thẻ <main>. Sửa thành thẻ <aside> vì đây là nội dung sidebar.
+- Dòng 37 — Thẻ <p> trong footer chưa có thẻ đóng — Thêm </p> sau nội dung Copyright.
+- Tổng thể — Cấu trúc thiếu tính logic: thẻ <h1> nên nằm trong <header> để đúng cấu trúc phân cấp trang.
 
 Câu B4 - Phân tích trang web thật
 1. 3 thẻ semantic HTML: 
@@ -60,6 +60,13 @@ Câu B4 - Phân tích trang web thật
         ![Nav](screenshots/nav_shopee.png)
         ![Footer](screenshots/footer_shopee.png)
 2. 
+- Truy cập trang web `thegioididong.com`, chọn 1 sản phẩm bất kỳ và nhấn phím F12 để tìm table <img src="screenshots/table_TheGioiDiDong.png">, table hiển thị thông số kỹ thuật của sản phẩm đó.
+- Trang web`thegioididong.com` có sử dụng <tbody> nhưng không sử dụng <thead>.
+3.
+- Truy cập trang web `thegioididong.com`, chọn ô tìm kiếm và nhấn phím F12 để tìm form <img src="screenshots/form_TheGioiDiDong.png"> :
+    + action(/tim-kiem), method(GET)
+    + Input types được sử dụng: type="text"(ô nhập liệu chính), type="submit"(nút bấm)
+
 
 PHẦN C - Suy luận:
 
