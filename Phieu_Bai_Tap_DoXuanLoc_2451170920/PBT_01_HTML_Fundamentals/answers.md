@@ -7,7 +7,12 @@ Câu A1:
 - HTTP Request: Trình duyệt gửi yêu cầu lấy file HTML.
 - Server Response: Server gửi trả lại dữ liệu.
 - Browser Rendering: Trình duyệt đọc HTML/CSS/JS để vẽ giao diện.
-2. Trong DevTools của Chrome, tab Network cho thấy thông tin về các yêu cầu/phản hồi giữa trình duyệt và máy chủ, giúp theo dõi thời gian tải và kích thước file.
+2. 
+- Trong DevTools của Chrome, tab Network cho thấy thông tin về các yêu cầu/phản hồi giữa trình duyệt và máy chủ, giúp theo dõi thời gian tải và kích thước file.
+- Ảnh phân tích 1 trang web (VD: truy cập `google.com` <img src="screenshots/screen_google_check.png"> ) theo 3 yêu cầu:
+    1. Status Code của request đầu tiên
+    2. Tổng thời gian load trang
+    3. Một request trả về file CSS
 
 
 Câu A2:
@@ -17,10 +22,6 @@ Câu A2:
     3. `<div class="main">` -> `<main>`: Nội dung chính duy nhất.
     4. `<div class="product">` -> `<article>`: Sản phẩm là nội dung độc lập.
     5. `<div class="footer">` -> `<footer>`: Chân trang.
-- Ảnh phân tích 1 trang web (VD: truy cập `google.com` <img src="screenshots/screen_google_check.png"> ) theo 3 yêu cầu:
-    1. Status Code của request đầu tiên
-    2. Tổng thời gian load trang
-    3. Một request trả về file CSS
 
 Câu A3:
 - Text art:
