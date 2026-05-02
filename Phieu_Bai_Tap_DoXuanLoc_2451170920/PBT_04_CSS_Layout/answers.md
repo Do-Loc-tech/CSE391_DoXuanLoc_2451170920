@@ -1,4 +1,5 @@
 PHẦN A - KIỂM TRA ĐỌC HIỂU
+
 Câu A1 - 5 loại Positioning
 | Position  | Vẫn chiếm chỗ trong flow? | Tham chiếu vị trí | Cuộn theo trang? | Use case |
 |-----------|----------------------------|-------------------|------------------|----------|
