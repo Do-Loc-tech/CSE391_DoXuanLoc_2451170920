@@ -1,0 +1,49 @@
+/* Cách 1: border-box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    background: #e5e7eb;
+}
+
+.content {
+    width: 660px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    background: #f3f4f6;
+}
+
+/* Cách 2: không border-box
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 258px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    background: #e5e7eb;
+}
+
+.content {
+    width: 598px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    background: #f3f4f6;
+} */

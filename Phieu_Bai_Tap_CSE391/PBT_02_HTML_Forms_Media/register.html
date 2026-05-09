@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký Tài khoản - ShopTLU</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background-color: #f8f9fa; }
+        form { max-width: 600px; margin: auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        fieldset { border: 1px solid #dee2e6; margin-bottom: 20px; padding: 20px; border-radius: 8px; }
+        legend { font-weight: 700; padding: 0 10px; color: #212529; font-size: 1.1rem; }
+        .form-group { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: .5rem; font-weight: 600; color: #495057; }
+        input, select, textarea { width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 5px; transition: border-color .15s; }
+        input:focus { outline: none; border-color: #80bdff; box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); }
+        input[type="radio"], input[type="checkbox"] { width: auto; cursor: pointer; }
+        .radio-inline { display: flex; gap: 20px; align-items: center; margin-top: 5px; }
+        .radio-item { display: flex; align-items: center; gap: 5px; }
+        .actions { display: flex; gap: 12px; margin-top: 20px; }
+        button { flex: 1; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; text-transform: uppercase; }
+        button[type="submit"] { background-color: #007bff; color: #fff; }
+        button[type="reset"] { background-color: #6c757d; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="POST">
+        <h2 style="text-align: center; margin-bottom: 25px;">Đăng ký Tài khoản</h2>
+
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            <div class="form-group">
+                <label for="fullname">Họ tên</label>
+                <input type="text" id="fullname" name="fullname" required minlength="2" maxlength="50" placeholder="Nguyễn Văn A">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0901234567">
+            </div>
+            <div class="form-group">
+                <label for="dob">Ngày sinh</label>
+                <input type="date" id="dob" name="dob" max="2026-05-01">
+            </div>
+            <div class="form-group">
+                <label>Giới tính</label>
+                <div class="radio-inline">
+                    <div class="radio-item">
+                        <input type="radio" id="m" name="gender" value="male">
+                        <label for="m" style="margin:0">Nam</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="f" name="gender" value="female">
+                        <label for="f" style="margin:0">Nữ</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="o" name="gender" value="other">
+                        <label for="o" style="margin:0">Khác</label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tài khoản</legend>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" pattern="[A-Za-z0-9_]{3,20}" placeholder="user_123">
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" name="password" minlength="8" pattern="^(?=.*[A-Z])(?=.*[0-9]).{8,}$" placeholder="Ít nhất 1 chữ hoa, 1 số">
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Xác nhận mật khẩu</label>
+                <input type="password" id="confirm_password" name="confirm_password" minlength="8" pattern="^(?=.*[A-Z])(?=.*[0-9]).{8,}$" placeholder="Nhập lại mật khẩu">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Thông tin giao hàng</legend>
+            <div class="form-group">
+                <label for="city">Thành phố</label>
+                <select id="city" name="city">
+                    <option value="">Chọn thành phố</option>
+                    <option value="hn">Hà Nội</option>
+                    <option value="hcm">TP. Hồ Chí Minh</option>
+                    <option value="dn">Đà Nẵng</option>
+                    <option value="hp">Hải Phòng</option>
+                    <option value="ct">Cần Thơ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="district">Quận/Huyện</label>
+                <select id="district" name="district">
+                    <option value="">Chọn quận/huyện</option>
+                    <option value="q1">Quận 1</option>
+                    <option value="q2">Quận 2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Địa chỉ chi tiết</label>
+                <textarea id="address" name="address" rows="3" placeholder="Số nhà, tên đường..."></textarea>
+            </div>
+        </fieldset>
+
+        <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="tos" name="tos" required>
+            <label for="tos" style="margin:0">Tôi đồng ý với điều khoản dịch vụ</label>
+        </div>
+
+        <div class="actions">
+            <button type="submit">Đăng ký ngay</button>
+            <button type="reset">Làm lại</button>
+        </div>
+    </form>
+
+</body>
+</html>

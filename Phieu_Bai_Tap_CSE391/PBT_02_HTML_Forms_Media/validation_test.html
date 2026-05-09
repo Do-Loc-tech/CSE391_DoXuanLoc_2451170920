@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation Test - Câu A2</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        form { max-width: 500px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        .case { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { background: #28a745; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Test Form Validation</h2>
+    <form action="#">
+        <div class="case">
+            <label>Trường hợp 1 (Required):</label>
+            <input type="text" required value="">
+        </div>
+
+        <div class="case">
+            <label>Trường hợp 2 (Email format):</label>
+            <input type="email" value="abc">
+        </div>
+
+        <div class="case">
+            <label>Trường hợp 3 (Number Range):</label>
+            <input type="number" min="1" max="10" value="15">
+        </div>
+
+        <div class="case">
+            <label>Trường hợp 4 (Pattern/Regex):</label>
+            <input type="text" pattern="[0-9]{10}" value="abc123">
+        </div>
+
+        <div class="case">
+            <label>Trường hợp 5 (Minlength):</label>
+            <input type="password" minlength="8" value="123">
+        </div>
+
+        <button type="submit">SUBMIT TEST</button>
+    </form>
+
+</body>
+</html>

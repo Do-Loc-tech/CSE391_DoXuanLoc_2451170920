@@ -1,0 +1,29 @@
+/* 1 */
+p { color: black; }                         /* 0,0,1 */
+
+/* 2 */
+* { color: gray; }                          /* 0,0,0 */
+
+/* 3 */
+.text { color: blue; }                     /* 0,1,0 */
+
+/* 4 */
+.highlight { color: green; }               /* 0,1,0 */
+
+/* 5 */
+p.text { color: orange; }                  /* 0,1,1 */
+
+/* 6 */
+p.highlight { color: pink; }               /* 0,1,1 */
+
+/* 7 */
+.text.highlight { color: purple; }         /* 0,2,0 */
+
+/* 8 */
+#demo { color: red; }                      /* 1,0,0 */
+
+/* 9 */
+p#demo { color: brown; }                   /* 1,0,1 */
+
+/* 10 */
+body p#demo.highlight { color: hotpink; }  /* 1,1,2 */
