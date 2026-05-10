@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Page</title>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="brand">
+                <a href="#">ShopResponsive</a>
+            </div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Bộ sưu tập mới</p>
+                <h1>Shop responsive đa thiết bị</h1>
+                <p>Khám phá các sản phẩm hot với bố cục tối ưu cho mobile, tablet và desktop.</p>
+                <a class="button button-primary" href="#products">Mua ngay</a>
+            </div>
+        </section>
+
+        <main class="layout">
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h2>Điều kiện lọc</h2>
+                    <label>Danh mục</label>
+                    <select>
+                        <option>All</option>
+                        <option>Thời trang</option>
+                        <option>Điện tử</option>
+                        <option>Gia dụng</option>
+                    </select>
+                    <label>Khoảng giá</label>
+                    <input type="range" min="0" max="1000" value="450">
+                    <button class="button button-secondary">Áp dụng</button>
+                </div>
+            </aside>
+
+            <section class="products" id="products">
+                <div class="section-header">
+                    <h2>Sản phẩm nổi bật</h2>
+                    <p>Grid responsive theo kích thước màn hình.</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/p1/600/450" alt="Product 1">
+                        <div class="product-info">
+                            <h3>Giày chạy bộ</h3>
+                            <p>Thiết kế nhẹ, phù hợp mọi vận động.</p>
+                            <div class="card-footer">
+                                <span class="price">₫1.250.000</span>
+                                <button class="button button-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/p2/600/450" alt="Product 2">
+                        <div class="product-info">
+                            <h3>Áo thun unisex</h3>
+                            <p>Vải mềm, thoáng mát cho ngày hè.</p>
+                            <div class="card-footer">
+                                <span class="price">₫320.000</span>
+                                <button class="button button-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/p3/600/450" alt="Product 3">
+                        <div class="product-info">
+                            <h3>Đồng hồ thông minh</h3>
+                            <p>Giám sát sức khỏe, pin lâu.</p>
+                            <div class="card-footer">
+                                <span class="price">₫2.190.000</span>
+                                <button class="button button-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/p4/600/450" alt="Product 4">
+                        <div class="product-info">
+                            <h3>Tai nghe không dây</h3>
+                            <p>Chống ồn, âm thanh sống động.</p>
+                            <div class="card-footer">
+                                <span class="price">₫850.000</span>
+                                <button class="button button-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/p5/600/450" alt="Product 5">
+                        <div class="product-info">
+                            <h3>Balo du lịch</h3>
+                            <p>Chống nước, nhiều ngăn tiện lợi.</p>
+                            <div class="card-footer">
+                                <span class="price">₫690.000</span>
+                                <button class="button button-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/p6/600/450" alt="Product 6">
+                        <div class="product-info">
+                            <h3>Kính râm thời trang</h3>
+                            <p>UV400, phong cách hiện đại.</p>
+                            <div class="card-footer">
+                                <span class="price">₫390.000</span>
+                                <button class="button button-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/p7/600/450" alt="Product 7">
+                        <div class="product-info">
+                            <h3>Bàn làm việc</h3>
+                            <p>Thiết kế tối giản, phù hợp văn phòng.</p>
+                            <div class="card-footer">
+                                <span class="price">₫1.150.000</span>
+                                <button class="button button-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/p8/600/450" alt="Product 8">
+                        <div class="product-info">
+                            <h3>Áo khoác gió</h3>
+                            <p>Nhẹ, chống gió, thoải mái.</p>
+                            <div class="card-footer">
+                                <span class="price">₫540.000</span>
+                                <button class="button button-primary">Mua ngay</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="ads-bar">
+                <div class="sidebar-card">
+                    <h2>Ưu đãi hôm nay</h2>
+                    <p>Giảm 15% cho giá trị đơn hàng trên 1.000.000₫.</p>
+                    <p>Bài viết nổi bật</p>
+                    <ul>
+                        <li>03 mẹo chọn giày chạy bộ</li>
+                        <li>Làm sạch tai nghe đúng cách</li>
+                        <li>Bảo quản áo thun mềm mại</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 ShopResponsive. Bản quyền thuộc về ShopResponsive.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: $font-primary;
+  background: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: min(1200px, 100% - $spacing-lg);
+  margin: 0 auto;
+  padding: $spacing-lg 0;
+}
+
+.header {
+  @include flex-center;
+  justify-content: space-between;
+  padding: $spacing-md 0;
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .menu {
+    display: flex;
+    gap: $spacing-lg;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.hero {
+  padding: $spacing-lg 0;
+  background: linear-gradient(135deg, lighten($primary-color, 50%), #eff6ff);
+  border-radius: $radius-lg;
+  margin-bottom: $spacing-lg;
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    max-width: 560px;
+    padding: $spacing-lg;
+  }
+
+  h1 {
+    margin: 0 0 $spacing-sm;
+    font-size: clamp(2rem, 3.3vw, 3rem);
+  }
+
+  p {
+    margin: 0 0 $spacing-md;
+    color: $muted-color;
+  }
+}
+
+.button {
+  @include flex-center;
+  gap: $spacing-sm;
+  padding: 0.95rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.25s ease, color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &--primary {
+    background: $primary-color;
+    color: #fff;
+  }
+
+  &--secondary {
+    background: #fff;
+    color: $text-color;
+    border: 1px solid $border-color;
+  }
+}
+
+.product-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.card {
+  @include card-shadow;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 50px rgba(15, 23, 42, 0.14);
+  }
+
+  &-image {
+    overflow: hidden;
+
+    img {
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  &-body {
+    padding: $spacing-md;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  &-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-in--delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-in--delay-2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spinner {
+  width: 90px;
+  height: 90px;
+  border: 10px solid lighten($primary-color, 35%);
+  border-top-color: $primary-color;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .content {
+    padding: 32px 24px;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .container {
+    padding: 0;
+  }
+}

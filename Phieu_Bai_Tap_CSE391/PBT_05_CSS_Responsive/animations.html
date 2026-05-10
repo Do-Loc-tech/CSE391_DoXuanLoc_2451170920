@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-inner fade-in">
+            <h1>Animation & Transition Demo</h1>
+            <p>Các hiệu ứng hover, zoom hình ảnh, spinner và fade-in được tạo bằng CSS.</p>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="cards-grid fade-in delay-1">
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/a1/640/480" alt="Product image">
+                </div>
+                <div class="card-body">
+                    <h2>Card Hover</h2>
+                    <p>Hover vào card để thấy hiệu ứng nâng lên và bóng đổ.</p>
+                    <button class="button button-primary">Xem thêm</button>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/a2/640/480" alt="Product image">
+                </div>
+                <div class="card-body">
+                    <h2>Button Hover</h2>
+                    <p>Nút thay đổi màu sắc và phóng to nhẹ khi chuột vào.</p>
+                    <button class="button button-secondary">Mua ngay</button>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/a3/640/480" alt="Product image">
+                </div>
+                <div class="card-body">
+                    <h2>Image Zoom</h2>
+                    <p>Ảnh được phóng to khi hover trong container overflow ẩn.</p>
+                    <button class="button button-primary">Chi tiết</button>
+                </div>
+            </article>
+        </section>
+
+        <section class="spinner-panel fade-in delay-2">
+            <div class="loader"></div>
+            <p>Loading spinner CSS-only</p>
+        </section>
+
+        <section class="feature-list fade-in delay-3">
+            <div class="feature-card">
+                <h3>Fade-in Animation</h3>
+                <p>Phần tử sử dụng keyframes fadeIn khi xuất hiện ở trang.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Transition Mượt</h3>
+                <p>Transition được áp dụng cho hover của button và card.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
