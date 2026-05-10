@@ -135,7 +135,3 @@ CSS skeleton mobile-first:
   .map { height: 360px; }
 }
 ```
-
----
-
-Ghi chú: Phần D quay video không được thực hiện theo yêu cầu.
