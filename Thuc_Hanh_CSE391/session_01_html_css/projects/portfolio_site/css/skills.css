@@ -46,6 +46,18 @@
     border-radius: 999px;
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
     transition: width 1s ease-out;
+    animation: fillProgress 1s ease-out forwards;
+}
+
+@keyframes fillProgress {
+    from {
+        width: 0;
+        opacity: 0.6;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 @media (max-width: 780px) {
