@@ -121,6 +121,13 @@
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    transform: scale(1.2) rotate(90deg);
+    color: #ef4444;
 }
 
 @media (max-width: 640px) {
