@@ -64,6 +64,16 @@
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
 }
 
+.form-group input:valid {
+    border-color: #10b981;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.form-group input:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
 .submit-btn {
     display: inline-flex;
     align-items: center;
