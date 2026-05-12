@@ -42,4 +42,31 @@
         flex-direction: column;
         align-items: flex-start;
     }
+    
+    .footer {
+        padding: 2rem 0 2.5rem;
+    }
+    
+    .footer-links {
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-inner {
+        gap: 0.5rem;
+    }
+    
+    .footer-logo {
+        font-size: 1rem;
+    }
+    
+    .footer-copy {
+        font-size: 0.9rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
 }
