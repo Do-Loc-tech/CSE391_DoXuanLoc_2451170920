@@ -83,5 +83,17 @@ button {
     .container {
         width: min(var(--max-width), calc(100% - 1.5rem));
     }
+    
+    .section-heading h2 {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+    }
+}
+
+@media (max-width: 640px) {
+    .section-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+    }
+}
 }
 }
