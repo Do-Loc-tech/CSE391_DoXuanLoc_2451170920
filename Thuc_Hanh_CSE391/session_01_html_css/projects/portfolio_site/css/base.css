@@ -1,3 +1,4 @@
+/* Base CSS: Reset and normalization for all elements */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -82,4 +83,5 @@ button {
     .container {
         width: min(var(--max-width), calc(100% - 1.5rem));
     }
+}
 }
