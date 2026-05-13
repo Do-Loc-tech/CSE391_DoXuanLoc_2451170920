@@ -1,0 +1,28 @@
+.article-card img {
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.sidebar-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.comment-form {
+  background: rgba(255,255,255,.04);
+}
+
+.comment-card {
+  background: rgba(255,255,255,.05);
+}
+
+.comment-card.reply {
+  margin-left: 1.5rem;
+  border-left: 3px solid rgba(27,197,189,.65);
+}
+
+@media (max-width: 992px) {
+  .comment-card.reply {
+    margin-left: 0;
+  }
+}

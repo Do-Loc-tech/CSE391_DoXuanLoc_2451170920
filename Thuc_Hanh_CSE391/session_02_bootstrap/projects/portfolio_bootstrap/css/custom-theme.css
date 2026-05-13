@@ -1,0 +1,129 @@
+:root {
+  color-scheme: dark;
+  --bs-body-bg: #050816;
+  --bs-body-color: #e2e8f0;
+  --bs-primary: #1bc5bd;
+  --bs-secondary: #0f172a;
+  --bs-border-radius: 1rem;
+  --bs-border-radius-lg: 1.2rem;
+  --bs-border-radius-sm: 0.75rem;
+  --bs-gutter-x: 1.75rem;
+  --bs-gutter-y: 1.5rem;
+}
+
+body {
+  background: #050816;
+  color: #e2e8f0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.bg-body {
+  background-color: #070a1a !important;
+}
+
+.text-body {
+  color: #e2e8f0 !important;
+}
+
+.navbar, .card, .footer {
+  background: #070a1a;
+}
+
+.navbar-brand, .nav-link {
+  color: #f8fafc !important;
+}
+
+.nav-link.active, .nav-link:hover {
+  color: #1bc5bd !important;
+}
+
+header {
+  background: linear-gradient(135deg, rgba(27,197,189,.12), rgba(5,8,22,.95));
+}
+
+.hero-section {
+  background: linear-gradient(180deg, rgba(7,10,26,.95) 0%, rgba(5,8,22,.92) 100%);
+}
+
+.hero-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.section-title {
+  color: #f8fafc;
+}
+
+.card {
+  background: #0b1226;
+  border-color: rgba(255,255,255,.08);
+}
+
+.card .card-title {
+  color: #ffffff;
+}
+
+.work-card img,
+.article-card img {
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.about-card,
+.contact-card,
+.sidebar-card,
+.comment-card,
+.comment-form {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.list-group-item {
+  background: transparent;
+  color: #cbd5e1;
+}
+
+.list-group-item:hover {
+  background: rgba(27,197,189,.08);
+}
+
+.badge.bg-secondary {
+  background-color: rgba(255,255,255,.12) !important;
+}
+
+.comment-avatar {
+  width: 44px;
+  height: 44px;
+  font-weight: 700;
+}
+
+.comment-form .form-control {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #f8fafc;
+}
+
+.comment-form .form-control:focus {
+  border-color: #1bc5bd;
+  box-shadow: 0 0 0 0.2rem rgba(27,197,189,.16);
+}
+
+.comment-card p {
+  color: #d1d5db;
+}
+
+.comment-card button {
+  color: #1bc5bd;
+}
+
+footer {
+  background: #02050f;
+}
+
+a {
+  color: #1bc5bd;
+}
+
+a:hover {
+  color: #8ef1eb;
+}

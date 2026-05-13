@@ -1,0 +1,28 @@
+.comments-section {
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.comment-form .form-control {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #f8fafc;
+}
+
+.comment-form .form-control:focus {
+  border-color: #1bc5bd;
+  box-shadow: 0 0 0 0.2rem rgba(27,197,189,.16);
+}
+
+.comment-avatar {
+  width: 42px;
+  height: 42px;
+  font-size: 0.95rem;
+}
+
+.comment-card p {
+  color: #d1d5db;
+}
+
+.comment-card button {
+  color: #1bc5bd;
+}
