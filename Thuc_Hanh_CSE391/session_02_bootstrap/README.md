@@ -1,37 +1,35 @@
-# Session 3 — JavaScript Interactive
+# Session 2 — Bootstrap 5
 
 ## 🎯 Mục tiêu
 
-- Thêm interactivity vào Portfolio với Vanilla JavaScript
-- Nắm vững DOM manipulation và event handling
-- Sử dụng localStorage để persist data
-- Xây dựng form validation với regex
+- Chuyển đổi Portfolio từ HTML/CSS thuần sang Bootstrap 5
+- Nắm vững Bootstrap grid system và components
+- Tùy biến Bootstrap theme (colors, spacing, typography)
+- Hiểu cách override Bootstrap variables
 
 ---
 
 ## 📁 Cấu trúc thư mục
 
 ```
-session_03_javascript/
+session_02_bootstrap/
 ├── README.md              ← File này
 ├── exercises/             ← Đề bài
-│   ├── 01_skill_filter/
-│   ├── 02_lightbox/
-│   ├── 03_form_validation/
-│   └── 04_theme_toggle/
+│   ├── 01_bootstrap_conversion/
+│   ├── 02_blog_layout/
+│   ├── 03_comment_section/
+│   └── 04_theme_customize/
 ├── solutions/            ← Solution
 └── projects/
-    └── portfolio_js/
+    └── portfolio_bootstrap/
         ├── index.html
+        ├── blog.html
         ├── css/
-        │   ├── variables.css
-        │   └── styles.css
+        │   ├── custom-theme.css
+        │   ├── blog.css
+        │   └── comments.css
         └── js/
-            ├── main.js
-            ├── portfolio-filter.js
-            ├── lightbox.js
-            ├── form-validation.js
-            └── theme-toggle.js
+            └── main.js
 ```
 
 ---
@@ -48,177 +46,160 @@ session_03_javascript/
 - Không dùng dấu chấm ở cuối
 ```
 
-### Các loại commit TYPE cho Session 3
+### Các loại commit TYPE cho Session 2
 
 | TYPE | Ý nghĩa | Khi nào dùng |
 |------|---------|--------------|
-| `[DOM]` | DOM selection | querySelector, querySelectorAll |
-| `[EVENT]` | Event handling | addEventListener, event delegation |
-| `[STATE]` | State management | Variables, module pattern |
-| `[FEATURE]` | Thêm tính năng | New functionality |
-| `[VALIDATION]` | Validation logic | Form validation, regex |
-| `[STORAGE]` | localStorage/sessionStorage | Data persistence |
-| `[UI]` | Giao diện | Animations, transitions |
-| `[BUGFIX]` | Sửa lỗi | Fix bugs |
-| `[REFACTOR]` | Cấu trúc lại | Code cleanup |
+| `[BOOTSTRAP]` | Bootstrap setup | Thêm CDN, cấu hình Bootstrap |
+| `[FEATURE]` | Thêm tính năng | Components, layouts |
+| `[STYLE]` | Styling | Typography, spacing |
+| `[UI]` | Giao diện | Hover effects, animations |
+| `[CUSTOMIZE]` | Tùy biến theme | Override Bootstrap variables |
+| `[THEME]` | Theme styling | Color palette, dark mode |
+| `[REFACTOR]` | Cấu trúc lại | Tối ưu code |
 
 ### Ví dụ commit messages
 
 ```bash
 # ✅ Đúng
-git commit -m "[DOM] Select all filter buttons and items"
-git commit -m "[EVENT] Add click handlers to filters"
-git commit -m "[STATE] Create theme state management"
-git commit -m "[VALIDATION] Add email regex validation"
-git commit -m "[STORAGE] Add localStorage persistence"
-git commit -m "[UI] Implement filter transition animation"
-git commit -m "[BUGFIX] Fix active state indicator"
+git commit -m "[BOOTSTRAP] Add Bootstrap CDN and initial setup"
+git commit -m "[FEATURE] Convert grid to Bootstrap columns"
+git commit -m "[STYLE] Apply Bootstrap typography utilities"
+git commit -m "[CUSTOMIZE] Override Bootstrap primary color"
+git commit -m "[THEME] Apply complete new color palette"
 
 # ❌ Sai
-git commit -m "select elements"                  # thiếu TYPE
-git commit -m "[DOM] select all the buttons"     # quá dài
-git commit -m "fix bug"                         # thiếu TYPE
-git commit -m "[EVENT] click handler"           # không rõ ràng
+git commit -m "added bootstrap"                 # thiếu TYPE
+git commit -m "[FEATURE] did something"         # không rõ ràng
+git commit -m "fix"                              # quá ngắn
 ```
 
 ### Số lượng commit tối thiểu
 
 | Bài tập | Số commit tối thiểu |
 |---------|-------------------|
-| Bài 3.1 (Skill Filter) | 4 commits |
-| Bài 3.2 (Lightbox) | 4 commits |
-| Bài 3.3 (Form Validation) | 4 commits |
-| Bài 3.4 (Theme Toggle) | 4 commits |
-| **Tổng cộng** | **16 commits** |
+| Bài 2.1 (Bootstrap Conversion) | 3 commits |
+| Bài 2.2 (Blog Layout) | 3 commits |
+| Bài 2.3 (Comment Section) | 3 commits |
+| Bài 2.4 (Theme Customize) | 3 commits |
+| **Tổng cộng** | **12 commits** |
 
 ### Workflow commit cho mỗi bài
 
 ```bash
-# Bài 3.1 - Skill Filter (4 commits)
-git commit -m "[DOM] Select all filter buttons and portfolio items"
-git commit -m "[EVENT] Add click handlers to filter buttons"
-git commit -m "[STATE] Create filter state management"
-git commit -m "[UI] Implement filter transition animation"
+# Bài 2.1 - Bootstrap Conversion (3 commits)
+git commit -m "[BOOTSTRAP] Add Bootstrap CDN and initial setup"
+git commit -m "[REFACTOR] Convert grid to Bootstrap columns"
+git commit -m "[STYLE] Apply Bootstrap typography utilities"
 
-# Bài 3.2 - Lightbox (4 commits)
-git commit -m "[DOM] Create lightbox overlay element dynamically"
-git commit -m "[EVENT] Add click delegation for images"
-git commit -m "[FEATURE] Implement prev/next navigation"
-git commit -m "[FEATURE] Add keyboard navigation (Escape to close)"
+# Bài 2.2 - Blog Layout (3 commits)
+git commit -m "[FEATURE] Create blog post cards layout"
+git commit -m "[FEATURE] Build sticky sidebar"
+git commit -m "[FEATURE] Add categories and tags cloud"
 
-# Bài 3.3 - Form Validation (4 commits)
-git commit -m "[DOM] Select form and input elements"
-git commit -m "[VALIDATION] Add email regex validation"
-git commit -m "[UI] Display inline error messages"
-git commit -m "[FEATURE] Add form submit handler with preventDefault"
+# Bài 2.3 - Comment Section (3 commits)
+git commit -m "[FEATURE] Build comment form with Bootstrap"
+git commit -m "[FEATURE] Display threaded comments"
+git commit -m "[STYLE] Responsive comment layout"
 
-# Bài 3.4 - Theme Toggle (4 commits)
-git commit -m "[CSS] Implement CSS custom properties for themes"
-git commit -m "[STATE] Create theme state management"
-git commit -m "[STORAGE] Add localStorage persistence"
-git commit -m "[DETECTION] Add prefers-color-scheme detection"
+# Bài 2.4 - Theme Customize (3 commits)
+git commit -m "[CUSTOMIZE] Override Bootstrap primary color"
+git commit -m "[CUSTOMIZE] Add custom spacing scale"
+git commit -m "[THEME] Apply complete new color palette"
 ```
 
 ---
 
 ## 📝 Bài tập (4 bài)
 
-### Bài 3.1 — Skill Filter Animation (30 phút)
+### Bài 2.1 — Bootstrap Conversion (45 phút)
 
-**Mục tiêu:** Tạo filter cho portfolio items bằng JavaScript
+**Mục tiêu:** Chuyển Portfolio v1 (HTML/CSS) sang Bootstrap 5 grid
 
 **Kiến thức:**
-- DOM selection: `querySelectorAll`, `querySelector`
-- Class manipulation: `classList.add`, `classList.remove`, `classList.toggle`
-- Event handling: `addEventListener`
+- Bootstrap CDN setup
+- Container, Row, Column grid system
+- Bootstrap typography utilities
 
 **Yêu cầu:**
-- Filter buttons: All, Web, Mobile, Design
-- Click filter → hiện items thuộc category đó
-- Smooth transition animation
-- Active state indicator
+- Thêm Bootstrap 5.3 CSS/JS CDN
+- Thay thế custom grid bằng `.container`, `.row`, `.col-`
+- Responsive breakpoints giữ nguyên
 
 **Commit requirements:**
 ```
-[DOM] Select all filter buttons
-[EVENT] Add click handlers to filters
-[ANIMATION] Implement filter transition
-[BUGFIX] Fix active state indicator
+[BOOTSTRAP] Add Bootstrap CDN and initial setup
+[REFACTOR] Convert grid to Bootstrap cols
+[STYLE] Apply Bootstrap typography utilities
 ```
 
 ---
 
-### Bài 3.2 — Portfolio Lightbox (30 phút)
+### Bài 2.2 — Blog Layout + Sidebar (45 phút)
 
-**Mục tiêu:** Nâng cấp lightbox từ CSS-only sang JavaScript
+**Mục tiêu:** Xây dựng blog layout với sidebar sử dụng Bootstrap components
 
 **Kiến thức:**
-- Event delegation
-- Dynamic DOM creation
-- Keyboard navigation (Escape to close)
+- Bootstrap Cards, Badges, List groups
+- Sticky sidebar với `.sticky-top`
+- Navigation components
 
 **Yêu cầu:**
-- Click image → fullscreen lightbox
-- Next/Previous navigation
-- Escape key to close
-- Click outside to close
+- Blog posts displayed as cards
+- Sidebar: categories, recent posts, tags cloud
+- Sticky sidebar on desktop
 
 **Commit requirements:**
 ```
-[DOM] Create lightbox overlay element
-[EVENT] Add click delegation for images
-[FEATURE] Implement keyboard navigation
-[UX] Add lightbox animation
+[FEATURE] Create blog post cards layout
+[FEATURE] Build sticky sidebar
+[FEATURE] Add categories and tags cloud
 ```
 
 ---
 
-### Bài 3.3 — Contact Form Validation (30 phút)
+### Bài 2.3 — Comment Section UI (45 phút)
 
-**Mục tiêu:** Thêm real-time validation vào contact form
+**Mục tiêu:** Xây dựng comment system UI với Bootstrap forms
 
 **Kiến thức:**
-- Form events: `submit`, `input`, `blur`
-- Regex validation
-- Error message display
+- Bootstrap Forms, Input groups
+- Form validation styling
+- Avatar + comment thread display
 
 **Yêu cầu:**
-- Validate: name (required), email (format), message (min 10 chars)
-- Real-time validation on input
-- Error messages hiển thị inline
-- Submit handler với preventDefault
+- Comment form with avatar
+- Threaded comments display
+- Reply button UI
 
 **Commit requirements:**
 ```
-[DOM] Select form and input elements
-[VALIDATION] Add email regex validation
-[UX] Display inline error messages
-[FEATURE] Add submit handler
+[FEATURE] Build comment form with Bootstrap
+[FEATURE] Display threaded comments
+[STYLE] Responsive comment layout
 ```
 
 ---
 
-### Bài 3.4 — Theme Toggle + localStorage (30 phút)
+### Bài 2.4 — Customize Bootstrap Theme (45 phút)
 
-**Mục tiêu:** Thêm dark/light theme toggle với persistence
+**Mục tiêu:** Tùy biến Bootstrap theme khác biệt với default
 
 **Kiến thức:**
-- CSS Custom Properties (variables)
-- localStorage: `setItem`, `getItem`
-- `window.matchMedia` cho system preference
+- Bootstrap Sass variables override
+- CSS custom properties
+- Primary color, spacing, border-radius changes
 
 **Yêu cầu:**
-- Toggle button: dark ↔ light theme
-- Preference saved to localStorage
-- System preference detection (prefers-color-scheme)
-- Smooth transition between themes
+- Override `$primary` color (từ indigo sang teal/green)
+- Custom spacing scale
+- Border-radius changes
 
 **Commit requirements:**
 ```
-[STATE] Create theme state management
-[CSS] Implement CSS custom properties
-[STORAGE] Add localStorage persistence
-[DETECTION] Add prefers-color-scheme detection
+[CUSTOMIZE] Override Bootstrap primary color
+[CUSTOMIZE] Add custom spacing scale
+[THEME] Apply complete new color palette
 ```
 
 ---
@@ -227,8 +208,8 @@ git commit -m "[DETECTION] Add prefers-color-scheme detection"
 
 | Tiêu chí | Điểm | Mô tả |
 |----------|------|-------|
-| **Hoàn thành yêu cầu** | 4 | Tất cả 4 bài đều hoạt động |
-| **Code quality** | 2 | Clean DOM code, có comments |
+| **Hoàn thành yêu cầu** | 4 | Tất cả 4 bài đều hoàn thành |
+| **Code quality** | 2 | Bootstrap convention, clean overrides |
 | **Git commit** | 2 | Đủ commits theo convention |
 | **Problem solving** | 2 | Tự code, không copy nguyên cả file |
 
@@ -236,48 +217,44 @@ git commit -m "[DETECTION] Add prefers-color-scheme detection"
 
 ## ✅ Checklist trước khi nộp
 
-- [ ] Filter animation hoạt động
-- [ ] Lightbox navigation hoạt động
-- [ ] Form validation real-time
-- [ ] Theme toggle persist được
-- [ ] Keyboard navigation (Escape) hoạt động
-- [ ] Tối thiểu 16 commits
+- [ ] Bootstrap CDN hoạt động
+- [ ] Grid chuyển sang Bootstrap columns
+- [ ] Sidebar sticky hoạt động
+- [ ] Comment form responsive
+- [ ] Theme customize khác default
+- [ ] Tối thiểu 12 commits
 - [ ] Commit messages đúng format `[TYPE] Description`
 
 ---
 
 ## 🐛 Troubleshooting thường gặp
 
-### Event delegation not working
-```javascript
-// Sai: add listener to each item
-items.forEach(item => item.addEventListener('click', handler))
-
-// Đúng: delegate to parent
-parent.addEventListener('click', (e) => {
-    if (e.target.matches('.portfolio-item img')) {
-        openLightbox(e.target)
-    }
-})
+### Bootstrap not responsive
+```html
+<!-- Phải có meta viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-### localStorage not working
-```javascript
-// Luôn parse khi đọc
-const theme = localStorage.getItem('theme') ?? 'light'
+### Container vs Container-fluid
+```html
+<!-- Centered, max-width -->
+<div class="container"></div>
 
-// Luôn stringify khi lưu
-localStorage.setItem('theme', JSON.stringify(newTheme))
+<!-- Full width -->
+<div class="container-fluid"></div>
 ```
 
-### Theme toggle not smooth
-```css
-/* Thêm transition vào root */
-:root {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+### Column not working
+```html
+<!-- Sai: col phải trong row -->
+<div class="col-md-4"></div>
+
+<!-- Đúng: -->
+<div class="row">
+    <div class="col-md-4"></div>
+</div>
 ```
 
 ---
 
-**← [ Quay lại Lab Practical](../README.md) | [Session 2](../session_02_bootstrap/README.md) | Tiếp theo: [Session 4 - React Basics](../session_04_react_basics/README.md) →**
+**← [ Quay lại Lab Practical](../README.md) | [Session 1](../session_01_html_css/README.md) | Tiếp theo: [Session 3 - JavaScript](../session_03_javascript/README.md) →**
