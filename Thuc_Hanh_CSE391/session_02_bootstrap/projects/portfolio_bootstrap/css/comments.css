@@ -26,3 +26,14 @@
 .comment-card button {
   color: #1bc5bd;
 }
+
+/* Responsive comment layout for mobile */
+@media (max-width: 768px) {
+  .comment-card.reply {
+    margin-left: 1rem;
+  }
+  
+  .comment-thread {
+    padding: 0 1rem;
+  }
+}
