@@ -7,6 +7,7 @@
   --bs-border-radius: 1rem;
   --bs-border-radius-lg: 1.2rem;
   --bs-border-radius-sm: 0.75rem;
+  /* Custom spacing scale override */
   --bs-gutter-x: 1.75rem;
   --bs-gutter-y: 1.5rem;
 }
