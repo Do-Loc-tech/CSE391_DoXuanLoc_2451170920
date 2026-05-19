@@ -1,7 +1,8 @@
 :root {
   color-scheme: dark;
-  --bs-body-bg: #050816;
-  --bs-body-color: #e2e8f0;
+  --bs-body-bg: #0f172a;
+  --bs-body-color: #e6f4ea;
+  --bs-accent: #16a34a;
   --bs-primary: #16a34a; /* overridden primary color (teal→green) */
   --bs-secondary: #0f172a;
   --bs-border-radius: 1rem;
