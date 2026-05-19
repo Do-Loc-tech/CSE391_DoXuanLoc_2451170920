@@ -2,7 +2,7 @@
   color-scheme: dark;
   --bs-body-bg: #050816;
   --bs-body-color: #e2e8f0;
-  --bs-primary: #1bc5bd;
+  --bs-primary: #16a34a; /* overridden primary color (teal→green) */
   --bs-secondary: #0f172a;
   --bs-border-radius: 1rem;
   --bs-border-radius-lg: 1.2rem;
