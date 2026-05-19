@@ -37,3 +37,6 @@
     padding: 0 1rem;
   }
 }
+
+/* Responsive tweak: ensure comment layout stacks cleanly */
+.comment-card { transition: transform 0.18s ease; }
