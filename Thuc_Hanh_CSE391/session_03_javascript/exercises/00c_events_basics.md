@@ -252,8 +252,8 @@ rangeInput.addEventListener('input', (e) => {
 ```
 
 **Câu hỏi:**
-1. Sự khác biệt giữa event `input` và `change`?
-2. Tại sao dùng `e.target.value` thay vì `searchInput.value`?
+1. `input` fires on every change (keystroke/slider move) — dùng cho realtime. `change` fires when the value is committed (blur or Enter; for select it fires on selection change).
+2. `e.target.value` lấy giá trị từ chính phần tử kích hoạt sự kiện (an toàn khi dùng chung handler hoặc delegation). `searchInput.value` cũng được, nhưng `e.target.value` general hơn và tránh nhầm khi handler gắn cho nhiều input.
 
 ---
 

@@ -102,12 +102,25 @@ allItems.forEach((item, index) => {
 | `querySelectorAll('.class')` | NodeList | CSS selector | Cần tất cả phần tử khớp |
 
 **Bài tập con:**
+
+**GIẢI PHÁP:**
 ```javascript
-// TODO: Dùng Console thực hiện:
 // 1. Chọn h1 bằng getElementById
+const heading = document.getElementById('title');
+console.log("H1:", heading.textContent);
+
 // 2. Chọn p đầu tiên bằng querySelector
+const firstP = document.querySelector('.description');
+console.log("P đầu tiên:", firstP.textContent);
+
 // 3. Chọn tất cả li bằng querySelectorAll
+const allLi = document.querySelectorAll('.item');
+console.log("Số lượng li:", allLi.length);
+
 // 4. In ra nội dung của từng phần tử
+allLi.forEach((li, index) => {
+    console.log(`Li ${index}: ${li.textContent}`);
+});
 ```
 
 ---
@@ -144,12 +157,23 @@ desc.innerHTML = "<b>In đậm</b>";
 ```
 
 **Bài tập con:**
+
+**GIẢI PHÁP:**
 ```javascript
-// TODO: Thực hiện trên trang dom_basics.html
 // 1. Đổi title thành tên của bạn
+document.getElementById('title').textContent = "Lộc";
+
 // 2. Đổi p đầu tiên thành "Tôi đang học DOM"
+document.querySelector('.description').textContent = "Tôi đang học DOM";
+
 // 3. Đổi nội dung li đầu tiên thành "<strong>HTML5</strong>"
+document.querySelector('.item').innerHTML = "<strong>HTML5</strong>";
+
 // 4. Dùng querySelectorAll + forEach: thêm "(đã học)" vào cuối mỗi li
+const items = document.querySelectorAll('.item');
+items.forEach((item) => {
+    item.textContent = item.textContent + " (đã học)";
+});
 ```
 
 ---
@@ -182,11 +206,22 @@ console.log(title.className); // "main-title"
 ```
 
 **Bài tập con:**
+
+**GIẢI PHÁP:**
 ```javascript
-// TODO:
 // 1. Thêm class "highlight" cho tất cả li
+const allItems = document.querySelectorAll('.item');
+allItems.forEach((item) => {
+    item.setAttribute('class', 'item highlight');
+});
+
 // 2. Thêm attribute "data-index" cho mỗi li (0, 1, 2)
+allItems.forEach((item, index) => {
+    item.setAttribute('data-index', index);
+});
+
 // 3. Đổi title của trang (document.title) thành "DOM Practice"
+document.title = "DOM Practice";
 ```
 
 ---
@@ -233,12 +268,28 @@ title.classList.add('bold', 'text-red');
 ```
 
 **Bài tập con — Bật/tắt highlight:**
+
+**GIẢI PHÁP:**
 ```javascript
-// TODO:
+const items = document.querySelectorAll('.item');
+
 // 1. Thêm class "highlight" cho tất cả li
+items.forEach((item) => {
+    item.classList.add('highlight');
+});
+
 // 2. Kiểm tra li đầu tiên có class "highlight" không
+if (items[0].classList.contains('highlight')) {
+    console.log("Li đầu tiên có class highlight");
+}
+
 // 3. Toggle class "text-red" cho li thứ hai
+items[1].classList.toggle('text-red');
+
 // 4. Xóa class "highlight" khỏi tất cả li (dùng forEach)
+items.forEach((item) => {
+    item.classList.remove('highlight');
+});
 ```
 
 ---
@@ -270,12 +321,24 @@ title.style.color = '';  // Xóa inline style → quay về CSS mặc định
 ```
 
 **Bài tập con — Đổi màu theo điều kiện:**
+
+**GIẢI PHÁP:**
 ```javascript
-// TODO:
 // 1. Chọn tất cả li
-// 2. Nếu index chẵn → màu nền xanh nhạt (#dbeafe)
-// 3. Nếu index lẻ → màu nền hồng nhạt (#fce7f3)
-// 4. Font size = (index + 1) * 14 px
+const items = document.querySelectorAll('.item');
+
+items.forEach((item, index) => {
+    // 2. Nếu index chẵn → màu nền xanh nhạt (#dbeafe)
+    // 3. Nếu index lẻ → màu nền hồng nhạt (#fce7f3)
+    if (index % 2 === 0) {
+        item.style.backgroundColor = '#dbeafe';
+    } else {
+        item.style.backgroundColor = '#fce7f3';
+    }
+    
+    // 4. Font size = (index + 1) * 14 px
+    item.style.fontSize = (index + 1) * 14 + 'px';
+});
 ```
 
 ---
@@ -324,12 +387,26 @@ danhSach.replaceChild(replacement, oldItem);
 ```
 
 **Bài tập con — Danh sách động:**
+
+**GIẢI PHÁP:**
 ```javascript
-// TODO: Tạo function themMonHoc(tenMon)
-// 1. Tạo <li> mới với class "item"
-// 2. textContent = tenMon
-// 3. Thêm vào cuối <ul id="danh-sach">
-// 4. Gọi thử: themMonHoc("Vue.js"), themMonHoc("Node.js")
+// Tạo function themMonHoc(tenMon)
+function themMonHoc(tenMon) {
+    // 1. Tạo <li> mới với class "item"
+    const newLi = document.createElement('li');
+    newLi.classList.add('item');
+    
+    // 2. textContent = tenMon
+    newLi.textContent = tenMon;
+    
+    // 3. Thêm vào cuối <ul id="danh-sach">
+    const danhSach = document.getElementById('danh-sach');
+    danhSach.appendChild(newLi);
+}
+
+// 4. Gọi thử:
+themMonHoc("Vue.js");
+themMonHoc("Node.js");
 ```
 
 ---
