@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Scroll Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="gallery-shell">
+        <header>
+            <h1>Photo Gallery</h1>
+            <p>Infinite scroll + lazy load + lightbox.</p>
+        </header>
+
+        <main>
+            <div id="photo-grid" class="photo-grid"></div>
+            <div id="load-trigger" class="load-trigger">Loading more photos...</div>
+        </main>
+    </div>
+
+    <div id="lightbox" class="lightbox hidden">
+        <div class="lightbox-backdrop"></div>
+        <div class="lightbox-content">
+            <button id="close-lightbox" class="close-button">×</button>
+            <img id="lightbox-image" src="" alt="Photo preview" />
+            <p id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

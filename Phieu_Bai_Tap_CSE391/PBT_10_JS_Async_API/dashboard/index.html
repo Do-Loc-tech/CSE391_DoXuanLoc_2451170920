@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-API Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="dashboard-shell">
+        <header>
+            <h1>Dashboard</h1>
+            <p>Gọi song song nhiều API và hiển thị widget riêng.</p>
+        </header>
+
+        <div class="top-bar">
+            <button id="refresh-button">Refresh All</button>
+            <span id="load-time">Data loaded in -</span>
+        </div>
+
+        <div id="global-loading" class="global-loading hidden">Đang tải dữ liệu...</div>
+
+        <div class="widgets">
+            <section class="widget" id="widget-users">
+                <h2>Random Users</h2>
+                <div class="widget-status" id="status-users"></div>
+                <div class="widget-body" id="body-users"></div>
+            </section>
+
+            <section class="widget" id="widget-dogs">
+                <h2>Random Dogs</h2>
+                <div class="widget-status" id="status-dogs"></div>
+                <div class="widget-body" id="body-dogs"></div>
+            </section>
+
+            <section class="widget" id="widget-country">
+                <h2>Vietnam Info</h2>
+                <div class="widget-status" id="status-country"></div>
+                <div class="widget-body" id="body-country"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
