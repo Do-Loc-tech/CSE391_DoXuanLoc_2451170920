@@ -24,18 +24,27 @@ function renderCategories() {
 
 function renderProducts() {
   productList.innerHTML = ''
-  state.products.forEach((product, index) => {
+
+  if (state.products.length === 0) {
     const row = document.createElement('tr')
-    const statusClass = product.status === 'Còn hàng' ? 'in-stock' : 'out-of-stock'
-    row.innerHTML = `
-      <td>${index + 1}</td>
-      <td>${product.name}</td>
-      <td>${product.category}</td>
-      <td>${formatPrice(product.price)} đ</td>
-      <td><span class="status-pill ${statusClass}">${product.status}</span></td>
-    `
+    row.classList.add('no-products')
+    row.innerHTML = '<td colspan="5">Chưa có sản phẩm nào. Vui lòng thêm sản phẩm mới.</td>'
     productList.appendChild(row)
-  })
+  } else {
+    state.products.forEach((product, index) => {
+      const row = document.createElement('tr')
+      const statusClass = product.status === 'Còn hàng' ? 'in-stock' : 'out-of-stock'
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${product.name}</td>
+        <td>${product.category}</td>
+        <td>${formatPrice(product.price)} đ</td>
+        <td><span class="status-pill ${statusClass}">${product.status}</span></td>
+      `
+      productList.appendChild(row)
+    })
+  }
+
   productCount.textContent = `${state.products.length} sản phẩm`
 }
 
@@ -50,7 +59,7 @@ form.addEventListener('submit', (event) => {
   const price = Number(form.price.value)
   const status = form.status.value
 
-  if (!name || !category || !price) {
+  if (!name || !category || price <= 0) {
     return
   }
 
