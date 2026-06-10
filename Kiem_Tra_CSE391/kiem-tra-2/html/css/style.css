@@ -72,6 +72,29 @@ body {
   color: var(--muted);
 }
 
+.panel-description {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.product-summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.product-summary strong {
+  color: var(--text);
+}
+
+.no-products td {
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
 .product-form {
   display: grid;
   gap: 18px;
@@ -192,12 +215,10 @@ body {
 
 .in-stock {
   color: #166534;
-  background: #dcfce7;
 }
 
 .out-of-stock {
   color: #991b1b;
-  background: #fee2e2;
 }
 
 @media (max-width: 1060px) {
