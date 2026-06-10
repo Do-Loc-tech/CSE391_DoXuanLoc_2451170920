@@ -1,0 +1,254 @@
+:root {
+  --bg: #f4f8ff;
+  --surface: #ffffff;
+  --surface-strong: #eef4ff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #dbeafe;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.page-header {
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+  border-radius: 28px;
+  color: #fff;
+  padding: 32px 32px 34px;
+  box-shadow: var(--shadow);
+}
+
+.page-header-inner {
+  display: grid;
+  gap: 12px;
+}
+
+.header-label {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+.header-description {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 760px;
+  line-height: 1.75;
+}
+
+.content-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1.2fr 1fr;
+  margin-top: 28px;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.panel-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.panel-title h2 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.panel-title p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.product-form {
+  display: grid;
+  gap: 18px;
+}
+
+.product-form label {
+  display: grid;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.product-form input,
+.product-form select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text);
+}
+
+.product-form input::placeholder {
+  color: var(--muted);
+}
+
+.form-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 20px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: #eef4ff;
+  color: var(--text);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.product-table th,
+.product-table td {
+  text-align: left;
+  padding: 16px 18px;
+}
+
+.product-table thead th {
+  background: #f8fbff;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.product-table tbody tr {
+  border-top: 1px solid #eef4ff;
+}
+
+.product-table tbody tr:nth-child(even) {
+  background: #fbfdff;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.in-stock {
+  color: #166534;
+}
+
+.out-of-stock {
+  color: #b91c1c;
+}
+
+@media (max-width: 1040px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .app-container {
+    padding: 22px 16px 32px;
+  }
+
+  .page-header {
+    padding: 24px 18px;
+  }
+
+  .panel {
+    padding: 22px;
+  }
+
+  .product-form input,
+  .product-form select {
+    padding: 12px 14px;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 12px 14px;
+  }
+}
