@@ -5,6 +5,8 @@ const state = {
 const productList = document.getElementById('productList')
 const productCount = document.getElementById('productCount')
 const categorySelect = document.getElementById('category')
+const filterCategory = document.getElementById('filterCategory')
+const filterStatus = document.getElementById('filterStatus')
 const form = document.getElementById('productForm')
 const resetBtn = document.getElementById('resetBtn')
 
@@ -19,6 +21,24 @@ function renderCategories() {
     option.value = category
     option.textContent = category
     categorySelect.appendChild(option)
+  })
+}
+
+function renderFilterCategories() {
+  filterCategory.innerHTML = '<option value="">Tất cả</option>'
+  window.productAppData.categories.forEach((category) => {
+    const option = document.createElement('option')
+    option.value = category
+    option.textContent = category
+    filterCategory.appendChild(option)
+  })
+}
+
+function getFilteredProducts() {
+  return state.products.filter((product) => {
+    const categoryMatch = filterCategory.value === '' || product.category === filterCategory.value
+    const statusMatch = filterStatus.value === '' || product.status === filterStatus.value
+    return categoryMatch && statusMatch
   })
 }
 

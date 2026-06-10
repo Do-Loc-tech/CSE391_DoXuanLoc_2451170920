@@ -89,6 +89,28 @@ body {
   color: var(--text);
 }
 
+.filter-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filter-row label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+  min-width: 220px;
+}
+
+.filter-row select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: #fff;
+}
+
 .no-products td {
   padding: 24px;
   text-align: center;
