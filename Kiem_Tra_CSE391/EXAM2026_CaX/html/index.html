@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-header">
+        <h1>Quản lý danh sách sản phẩm</h1>
+        <p>Giao diện nhập liệu và hiển thị danh sách sản phẩm một cách trực quan, rõ ràng</p>
+      </header>
+      <div class="content-grid">
+        <section class="panel panel-form">
+          <h2>Thêm sản phẩm mới</h2>
+          <p>Nhập đầy đủ thông tin để thêm sản phẩm vào danh sách</p>
+          <form id="productForm" class="product-form">
+            <label for="name">
+              Tên sản phẩm
+            </label>
+            <input type="text" id="name" name="name" placeholder="Nhập tên sản phẩm" required />
+
+            <label for="category">
+              Danh mục
+            </label>
+            <select id="category" name="category" required></select>
+
+            <label for="price">
+              Giá
+            </label>
+            <input type="number" id="price" name="price" placeholder="Nhập giá" min="1" required />
+
+            <label for="status">
+              Trạng thái còn hàng
+            </label>
+            <select id="status" name="status">
+              <option value="Còn hàng">Còn hàng</option>
+              <option value="Hết hàng">Hết hàng</option>
+            </select>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Thêm sản phẩm</button>
+              <button type="button" id="resetBtn" class="btn-secondary">Làm mới form</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel panel-table">
+          <div class="panel-title">
+            <div>
+              <h2>Danh sách sản phẩm</h2>
+              <p class="panel-description">Xem danh sách sản phẩm đang có và trạng thái hàng hóa.</p>
+            </div>
+            <div class="product-summary">
+              <strong id="productCount" aria-live="polite">0 sản phẩm</strong>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="product-table">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Tên sản phẩm</th>
+                  <th>Danh mục</th>
+                  <th>Giá</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody id="productList"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="data/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
